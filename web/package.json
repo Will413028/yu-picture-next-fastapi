@@ -1,0 +1,28 @@
+{
+  "name": "yu-picture-web",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.2.2",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3309",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3309",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:e2e": "playwright test",
+    "test:unit": "node --conditions=react-server --experimental-strip-types --test tests/readiness.test.ts"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
+  }
+}

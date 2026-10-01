@@ -1,0 +1,33 @@
+:root { color-scheme: light; font-family: Arial, "Noto Sans TC", sans-serif; color: #242c28; background: #f6f7f2; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.account-link { float: right; color: #477857; }
+.account-panel { max-width: 480px; margin: 60px auto; }
+.account-panel h1 { font-size: 36px; }
+form { display: grid; gap: 18px; margin: 24px 0; }
+label { display: grid; gap: 8px; }
+input, select, textarea { padding: 12px; border: 1px solid #b7c5b3; border-radius: 8px; font: inherit; width: 100%; }
+button { padding: 12px 18px; border: 1px solid #477857; border-radius: 8px; background: #477857; color: white; font: inherit; cursor: pointer; }
+button:disabled { opacity: .5; cursor: wait; }
+.admin-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); align-items: end; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 14px; border-bottom: 1px solid #dce1d6; }
+main { max-width: 1120px; margin: auto; padding: 0 36px; }
+header { padding: 28px 0; border-bottom: 1px solid #dce1d6; }
+.brand { font-size: 21px; font-weight: 750; text-decoration: none; color: #242c28; }
+.brand span { font-size: 13px; font-weight: 400; margin-left: 16px; color: #68726b; }
+.intro { padding: 90px 0 72px; }
+.eyebrow { font-size: 14px; letter-spacing: .14em; color: #557259; }
+h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.22; letter-spacing: -.04em; margin: 24px 0; }
+.description { color: #68726b; line-height: 1.9; font-size: 17px; }
+.status { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 14px; background: #fff; padding: 12px 17px; border-radius: 24px; border: 1px solid #dce1d6; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #ae7655; }
+.dot.connected { background: #477857; }
+.coming { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+article { border: 1px solid #dce1d6; border-radius: 14px; padding: 25px; }
+article span { color: #7f947a; font-size: 12px; }
+h2 { font-size: 20px; margin: 20px 0 12px; }
+article p { font-size: 14px; line-height: 1.7; color: #68726b; }
+footer { margin-top: 60px; padding: 24px 0; color: #68726b; font-size: 12px; }
+@media (max-width: 640px) { main { padding: 0 22px; } .intro { padding: 55px 0; } .coming { grid-template-columns: 1fr; } }

@@ -1,0 +1,23 @@
+name: Check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: python -m pip install uv==0.7.2
+      - run: npm install --global pnpm@11.2.2
+      - run: make install-frozen
+      - run: make browser-install
+      - run: make check
+      - if: always()
+        run: docker compose -f "${{ github.workspace }}/compose.yaml" stop
